@@ -1,0 +1,132 @@
+.gradient-bar {
+    display: flex;
+    width:100%;
+    height: 95px;
+    size:cover;
+    flex-shrink: 0;
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between; /* Spaces logo and nav items */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #121212 100%), linear-gradient(90deg, #F9A84B 0%, #4F3CFF 100%);
+    padding: 0 50px; /* Horizontal margin */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.projects-page .gradient-bar{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #121212 100%), #F9A84B;
+}
+
+.logo {
+    display: flex;
+    width: 188px;
+    height: 20px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.gradient-bar ul{
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Makes the items align horizontally */
+    gap: 58px; /* Adds spacing between items */
+    margin: 0;
+    padding: 0;
+}
+
+
+.gradient-bar ul li a{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gradient-bar ul li a:hover {
+    background: rgba(255, 255, 255, 0.5); /* Light transparent background */
+    border-radius: 10px;
+}
+
+body {
+    background: #121212;
+    background-size: cover;  /* Makes the background cover the entire page */
+    background-position: center center;  /* Centers the background */
+    padding: 0 132px;  
+    /*height: 100vh;   Ensures the body takes up the full height of the viewport */
+}
+
+body h1{
+    width: 100%;
+    height: 88px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    margin-top: 130px;
+    margin-bottom: 0px;
+}
+
+.home-page h1{
+    margin-top: 268px;
+}
+
+body p{
+    width: 100%;
+    height: 105px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px; /* 178.571% */
+    letter-spacing: 0.7px;
+}
+
+.highlight-design-engineering {
+    text-decoration: none;
+    color: #F9A84B;
+    font-weight: 600;
+}
+
+.highlight-music{
+    text-decoration: none;
+    color: #6F5FFF;
+    font-weight: 600;
+}
+
+.social-icons {
+    display:flex;
+    gap: 19px;
+    margin-top: 79px;
+}
+
+.wip {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;    /* Centers horizontally */
+    align-items: center;        /* Centers vertically */
+    margin-top: 79px;
+}
+
+.wip p{
+    flex-direction: column;
+    color: #757373;
+    justify-content: center;
+    width: 500px;
+    height: 122px;
+    flex-shrink: 0;
+    text-align: center;
+
+}
