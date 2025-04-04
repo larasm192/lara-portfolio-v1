@@ -1,3 +1,5 @@
+/* || ANIMATIONS */
+
 @keyframes fadeInMove {
     0% {
         opacity: 0; /* Start fully transparent */
@@ -27,9 +29,22 @@
     }
 }
 
-*{
+/* || GENERAL */
+
+*, html{
     cursor: url("assets/stickman-happy.svg") 0 2, auto;
 }
+
+
+html, body {
+    height: 100%;  /* Ensure the body takes up the full height of the viewport */
+    margin: 0;     /* Remove default margin */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    overflow: hidden;
+}
+
+/* || MENU BAR */
 
 .gradient-bar {
     display: flex;
@@ -69,6 +84,9 @@
     padding: 0;
 }
 
+.gradient-bar li{
+    position: relative;
+}
 
 .gradient-bar ul li a{
     display: flex;
@@ -85,23 +103,36 @@
     text-decoration: none;
 }
 
-.gradient-bar ul li a:hover {
-    background: rgba(255, 255, 255, 0.5); /* Light transparent background */
-    border-radius: 10px;
+.gradient-bar li a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
-html, body {
-    height: 100%;  /* Ensure the body takes up the full height of the viewport */
-    margin: 0;     /* Remove default margin */
-    display: flex;
-    flex-direction: column;  /* Stack elements vertically */
+.gradient-bar li a:hover{
+    cursor: url("assets/stickman-surprise.svg") 0 2, auto;
 }
+
+.gradient-bar li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+/* || BODY */
 
 body {
     background: #121212;
     background-size: cover;  /* Makes the background cover the entire page */
     background-position: center center;  /* Centers the background */
     padding: 0 132px;  
+    height: 100vh;
 }
 
 body h1{
@@ -149,6 +180,7 @@ body .container p{
 }
 
 .highlight-design-engineering:hover {
+    cursor: url("assets/stickman-surprise.svg") 0 2, auto;
     color: #D67404;
 }
 
@@ -159,8 +191,11 @@ body .container p{
 }
 
 .highlight-music:hover{
+    cursor: url("assets/stickman-surprise.svg") 0 2, auto;
     color: #4F3CFF;
 }
+
+/* || FOOTER */
 
 footer {
    flex-shrink: 0;
@@ -179,6 +214,7 @@ footer {
 
 .social-icons a:hover {
     opacity: 0.5;
+    cursor: url("assets/stickman-surprise.svg") 0 2, auto;
 }
 
 .credits p{
@@ -199,8 +235,12 @@ footer {
 }
 
 .footer-link:hover{
+    cursor: url("assets/stickman-surprise.svg") 0 2, auto;
     color:#D67404
 }
+
+
+/* || WIP */
 
 .wip {
     display:flex;
