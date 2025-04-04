@@ -1,3 +1,7 @@
+*, .gradient-bar {
+    cursor: url("assets/stickman-happy.svg") 0 2, auto;
+}
+
 .gradient-bar {
     display: flex;
     width:100%;
@@ -57,12 +61,18 @@
     border-radius: 10px;
 }
 
+html, body {
+    height: 100%;  /* Ensure the body takes up the full height of the viewport */
+    margin: 0;     /* Remove default margin */
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+}
+
 body {
     background: #121212;
     background-size: cover;  /* Makes the background cover the entire page */
     background-position: center center;  /* Centers the background */
     padding: 0 132px;  
-    /*height: 100vh;   Ensures the body takes up the full height of the viewport */
 }
 
 body h1{
@@ -91,7 +101,7 @@ body p{
     font-size: 14px;
     font-weight: 400;
     line-height: 25px; /* 178.571% */
-    letter-spacing: 0.7px;
+    letter-spacing: 0px;
 }
 
 .highlight-design-engineering {
@@ -100,16 +110,57 @@ body p{
     font-weight: 600;
 }
 
+.highlight-design-engineering:hover {
+    color: #D67404;
+}
+
 .highlight-music{
     text-decoration: none;
     color: #6F5FFF;
     font-weight: 600;
 }
 
+.highlight-music:hover{
+    color: #4F3CFF;
+}
+
+footer {
+   flex-shrink: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: auto;
+   padding-bottom: 20px;
+}
+
 .social-icons {
     display:flex;
     gap: 19px;
-    margin-top: 79px;
+}
+
+.social-icons a:hover {
+    opacity: 0.5;
+}
+
+.credits p{
+    width: 330px;
+    height: 30px;
+    text-decoration: none;
+    color: #d6d6d654;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #d6d6d654;
+    font-weight: 600;
+}
+
+.footer-link:hover{
+    color:#D67404
 }
 
 .wip {
