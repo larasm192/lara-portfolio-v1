@@ -55,12 +55,10 @@
 
 .logo {
     display: flex;
-    width: 188px;
-    height: 20px;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 700;
+}
+
+.logo:hover {
+    opacity: 0.5;
 }
 
 .gradient-bar ul{
@@ -116,7 +114,7 @@ body h1{
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 3.5px;
-    margin-top: 150px;
+    margin-top: 160px;
     margin-bottom: 0px;
     animation: fadeInMove 1.5s ease-in-out;
 }
@@ -214,6 +212,7 @@ footer {
 
 .wip p{
     flex-direction: column;
+    font-family: Inter;
     color: #757373;
     justify-content: center;
     width: 500px;
