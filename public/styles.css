@@ -1,4 +1,33 @@
-*, .gradient-bar {
+@keyframes fadeInMove {
+    0% {
+        opacity: 0; /* Start fully transparent */
+        top: 50px;
+    }
+    100% {
+        opacity: 1; /* End fully opaque */
+        top: 0px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+    }
+    100% {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+@keyframes backgroundfadeIn {
+    0% {
+        background-color: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #121212 100%), linear-gradient(90deg, #F9A84B 0%, #4F3CFF 100%);; /* Start fully transparent */
+    }
+    100% {
+        background-color: #F9A84B; /* End fully opaque */
+    }
+}
+
+*{
     cursor: url("assets/stickman-happy.svg") 0 2, auto;
 }
 
@@ -20,6 +49,8 @@
 
 .projects-page .gradient-bar{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #121212 100%), #F9A84B;
+    transition: background-color 1.5s ease-in-out; /* Smooth transition for the background color */
+    animation: backgroundfadeIn 1.5s ease-in-out;
 }
 
 .logo {
@@ -77,24 +108,28 @@ body {
 
 body h1{
     width: 100%;
+    position: relative;
     height: 88px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 700;
     letter-spacing: 3.5px;
-    margin-top: 130px;
+    margin-top: 150px;
     margin-bottom: 0px;
+    animation: fadeInMove 1.5s ease-in-out;
 }
 
 .home-page h1{
     margin-top: 268px;
+    font-size: 70px;
 }
 
-body p{
+body .container p{
     width: 100%;
     height: 105px;
+    position: relative;
     flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
@@ -102,6 +137,11 @@ body p{
     font-weight: 400;
     line-height: 25px; /* 178.571% */
     letter-spacing: 0px;
+
+    opacity: 0;
+    animation: fadeInMove 1.5s ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards; /* Keep the opacity at 1 after the animation completes */
 }
 
 .highlight-design-engineering {
@@ -131,6 +171,7 @@ footer {
    align-items: center;
    margin-top: auto;
    padding-bottom: 20px;
+   animation: fadeIn 1.0s ease-in-out;
 }
 
 .social-icons {
